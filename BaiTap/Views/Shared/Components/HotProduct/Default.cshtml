@@ -1,0 +1,14 @@
+﻿@model List<string>
+
+<h3>Sản phẩm Hot</h3>
+<div class="row">
+    @foreach (var p in Model)
+    {
+        <div class="col-4">
+            <div class="product-card hot">
+                <img src="~/images/products/im.jpg" alt="@p" class="img-fluid" />
+                <p>@p</p>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<string>
+@{
+    Layout = "_MyLayout";
+}
+
+
+
+<h3>Sản phẩm mới nhất</h3>
+<div class="row">
+    @foreach (var p in Model)
+    {
+        <div class="col-4">
+            <div class="product-card">
+                <img src="~/images/products/im.jpg" alt="@p" class="img-fluid"/>
+                <p>@p</p>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Gọi ViewComponent HotProduct -->
+@await Component.InvokeAsync("HotProduct")
+
